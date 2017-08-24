@@ -14,8 +14,7 @@ fun sum(x: Int, y: Int) = x + y
 fun convertToDollars(money: Money): Money {
     when (money.currency) {
         "U$" -> return money
-        "R$" -> return Money(money.amount * BigDecimal(3.50), "U$")
-        else -> throw IllegalArgumentException("Ixi deu ruim!")
+        "R$" -> return Money(money.amount * BigDecimal(3.50), "U$")        else -> throw IllegalArgumentException("Ixi deu ruim!")
     }
 }
 
@@ -37,7 +36,7 @@ fun BigDecimal.percent(percentage: Int) = this.multiply(java.math.BigDecimal(per
 fun main(args: Array<String>) {
 
     val tickets = Money(BigDecimal(100), "R$")
-    val popcorn = tickets.copy(BigDecimal(100), "R$")
+    val popcorn = tickets.copy(BigDecimal(25), "R$")
 
     val bd = BigDecimal(100)
     // bd.percent ???
@@ -47,6 +46,10 @@ fun main(args: Array<String>) {
 
     if (tickets != popcorn) {
         println("They are differents!")
+    }
+
+    if (tickets !== popcorn) {
+        println("Ref are differents!")
     }
 
     sendPayment(message = "Use com parcimonia!", money = tickets)
