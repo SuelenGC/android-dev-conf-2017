@@ -1,4 +1,4 @@
-package main.java;
+package android.dev.conf;
 
 public class JavaMoney {
 

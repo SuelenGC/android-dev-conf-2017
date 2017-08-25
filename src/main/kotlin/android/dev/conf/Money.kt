@@ -1,6 +1,7 @@
 package main.kotlin
 
-import main.java.JavaMoney
+
+import android.dev.conf.JavaMoney
 import java.math.BigDecimal
 
 data class Money(val amount: BigDecimal, val currency: String)
@@ -31,4 +32,10 @@ fun main(args: Array<String>) {
     sendPayment(message = "propina", money = propina);
 
     println(convertToDollar(propina))
+
+    val bd = BigDecimal(100)
+
+//    bd.percent(7)
+
+
 }

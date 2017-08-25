@@ -40,7 +40,7 @@ fun convertToDollars3(money: Money) = when (money.currency) {
     else -> throw IllegalArgumentException("Ixi deu ruim!")
 }
 
-fun BigDecimal.percent(percentage: Int) = this.multiply(java.math.BigDecimal(percentage)).divide(BigDecimal(100))
+//fun BigDecimal.percent(percentage: Int) = this.multiply(java.math.BigDecimal(percentage)).divide(BigDecimal(100))
 
 infix fun Int.percentOf(money: Money) = money.amount.multiply(BigDecimal(this)).divide(BigDecimal(100));
 
@@ -73,7 +73,7 @@ fun main(args: Array<String>) {
     val big = BigDecimal(100)
     // big.percent ???
 
-    println(big.percent(7))
+//    println(big.percent(7))
 
     println(50.percentOf(popcorn))
 
