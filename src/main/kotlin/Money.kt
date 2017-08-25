@@ -101,7 +101,28 @@ fun main(args: Array<String>) {
 
     main.kotlin.javaMoney(javaMoney)
     main.kotlin.javaMoney(null)
+
+
+    val users : MutableList<User> = mutableListOf<User>()
+    users.add(0, User("Suelen", "suelengcarvalho@gmail.com"))
+    users.add(1, User("David", "davidrobert@gmail.com"))
+    users.add(2, User("AA", "blahblah@test.com"))
+
+    val usersOrdered = users.filter { it.email.endsWith("gmail.com") }.sortedBy { it. nome }
+
+    println(usersOrdered)
+
+
+
+    val values = generateSequence(1) {
+        it * 10
+    }
+
+
+    values.take(10).forEach { println(it) }
 }
+
+data class User(val nome: String, val email: String)
 
 private val Int.bd: BigDecimal
     get() = BigDecimal(this)
