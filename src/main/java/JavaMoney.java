@@ -1,23 +1,14 @@
 package main.java;
 
-import main.kotlin.Money;
-
-import java.math.BigDecimal;
-
 public class JavaMoney {
 
-    private BigDecimal amount;
+    private int amount;
     private String currency;
     private int x = 10;
 
-    public JavaMoney(BigDecimal amount, String currency) {
+    public JavaMoney(int amount, String currency) {
         this.amount = amount;
         this.currency = currency;
-    }
-
-    public static void main(String[] args) {
-        Money money = new Money(new BigDecimal(100), "R$");
-        money.getAmount();
     }
 
     @Override
@@ -43,8 +34,8 @@ public class JavaMoney {
                 "}";
     }
 
-    public BigDecimal getAmount() {
-        return amount.multiply(new BigDecimal(2));
+    public int getAmount() {
+        return amount;
     }
 
     public String getCurrency() {
