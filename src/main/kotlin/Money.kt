@@ -29,7 +29,7 @@ fun convertToDollars(money: Money): Money {
 fun convertToDollars2(money: Money): Money {
     return when (money.currency) {
         "U$" -> money
-        "R$" -> Money(money.amount / BigDecimal(3.50), "U$")
+        "R$" -> Money(money.amount / BigDecimal(3.50), "U$")Å
         else -> throw IllegalArgumentException("Ixi deu ruim!")
     }
 }
